@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de temperament igual</title>
+  <link href="https://fonts.googleapis.com/css2?family=Flow+Ext&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blau: #010b85;
+      --gris: #d0d0d0;
+      --groc: #fffcba;
+    }
+
+	* {
+		transition-duration: 300ms;
+	}
+
+    body {
+      background-color: var(--gris);
+      color: var(--blau);
+      font-family: 'Flow Ext', cursive;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    .container {
+      background-color: white;
+      border: 2px solid var(--blau);
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(1, 11, 133, 0.1);
+    }
+
+    input[type=range] {
+      width: 100%;
+      margin-top: 2rem;
+      accent-color: var(--blau);
+    }
+
+    .freq {
+      font-size: 2em;
+      margin-top: 1.5rem;
+    }
+
+    .highlight {
+      background-color: var(--groc);
+      padding: 0.2em 0.4em;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .operacio {
+      font-size: 1.2em;
+      margin-top: 1rem;
+      color: var(--blau);
+      background-color: #ffffffaa;
+      padding: 0.5em;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 0.5rem 1rem;
+      background-color: var(--blau);
+	  border: 2px solid var(--blau);
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+	button:hover {
+    	background: #fff0;
+		color: var(--blau);
+	}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Calculadora de temperament igual</h1>
+    <p>Tria una nota del piano (n = 1 a 88)</p>
+
+    <input type="range" min="1" max="88" value="49" id="notaLiscador">
+
+    
+    <div class="freq">
+      Nota n = <span class="highlight" id="notaNum">49</span>
+      (<span class="highlight" id="notaNom">La4</span>)<br>
+      Freqüència = <span class="highlight" id="freq">440.00</span> Hz
+    </div>
+
+    <div class="operacio" id="operacio">
+      f(n) = 440 * (2<sup>1/12</sup>)<sup>0</sup>
+    </div>
+
+	<button id="b_music"> Play </button>
+  </div>
+
+  <script>
+    const liscador = document.getElementById('notaLiscador');
+    const notaNum = document.getElementById('notaNum');
+    const notaNom = document.getElementById('notaNom');
+    const freqVisual = document.getElementById('freq');
+    const operacioVisual = document.getElementById('operacio');
+
+    const notesNoms = ["Do", "Do♯", "Re", "Re♯", "Mi", "Fa", "Fa♯", "Sol", "Sol♯", "La", "La♯", "Si"];
+
+    function getNotaNom(n) {
+      const midiNumero = n + 20;
+      const nom = notesNoms[midiNumero % 12];
+      const octava = Math.floor(midiNumero / 12) - 1;
+      return nom + octava;
+    }
+
+    function calcularFrequencia(n) {
+      const exponent = n - 49;
+      const frequencia = 440 * Math.pow(Math.pow(2, 1 / 12), exponent);
+      return { frequencia, exponent };
+    }
+
+    function actualitzaVisual() {
+      const n = parseInt(liscador.value);
+      const { frequencia, exponent } = calcularFrequencia(n);
+      const nom = getNotaNom(n);
+
+      notaNum.textContent = n;
+      notaNom.textContent = nom;
+      freqVisual.textContent = frequencia.toFixed(2);
+      operacioVisual.innerHTML = `f(n) = 440 * (2<sup>1/12</sup>)<sup>${exponent}</sup>`;
+    }
+
+    liscador.addEventListener('input', actualitzaVisual);
+    actualitzaVisual(); //activo la funció quan es mou el range
+
+//--------------------------audio
+
+	const audio_ctx = new window.AudioContext();
+	let buzer = null;
+	let interval_id = null;
+
+	let b_music_pressed = false;
+	const b_music = document.querySelector("#b_music");
+
+	b_music.addEventListener("click", () => {
+		b_music_pressed = !b_music_pressed;
+
+        if (b_music_pressed) {
+            b_music.textContent = "Stop";
+        } else {
+            b_music.textContent = "Play";
+        }
+
+		if (b_music_pressed) {
+			buzer = audio_ctx.createOscillator();
+			buzer.type = 'sine';
+			buzer.connect(audio_ctx.destination);
+			buzer.start();
+
+			interval_id = setInterval(() => {
+				const n = parseInt(liscador.value);
+				const { frequencia } = calcularFrequencia(n);
+				buzer.frequency.setValueAtTime(frequencia, audio_ctx.currentTime);
+			}, 160);
+		} else {
+			if (buzer) {
+				buzer.stop();
+				buzer.disconnect();
+				buzer = null;
+			}
+			clearInterval(interval_id);
+		}
+	});
+  </script> 
+
+</body>
+</html>
