@@ -1,22 +1,57 @@
-#PDR Ivette Ramon. Música i Matemàtiques: Els sistemes d'afinació
+#  Música i Matemàtiques: Explorant la seva connexió 🎵
 
-Aquest projecte neix de la meva curiositat per entendre com la música, tot i ser una forma d'art tan expressiva, té una connexió tan profunda amb les matemàtiques. Des de fa milers d’anys, sabem que hi ha una relació entre el so i els números, però és en la música on aquesta connexió es fa més evident.
+Aquest projecte neix de la meva curiositat per entendre com la música i les matemàtiques estan profundament connectades. Des de fa milers d’anys, sabem que la música té una base matemàtica sòlida, i aquest treball busca explorar aquesta relació de manera accessible i pràctica.
 
-Objectiu del treball
-L’objectiu principal del meu treball és entendre com les proporcions numèriques i les lleis físiques han influït en la música tal com la coneixem avui dia. Em concentro especialment en el temperament igual, el sistema d’afinació que utilitzem per afinar instruments en la música occidental, i intento entendre per què funciona tan bé, tant des d’un punt de vista matemàtic com musical.
+---
 
-També vull explorar com conceptes com harmonia, dissonància i consonància tenen una base matemàtica i com això afecta la nostra percepció dels sons.
+## Objectiu del Projecte
 
-Contingut del repositori
-En aquest repositori trobaràs algunes eines web que he desenvolupat per experimentar amb els conceptes que he investigat:
+L'objectiu principal és entendre com les **proporcions numèriques** i les **lleis físiques** han influït en la música tal com la coneixem avui dia. Em centro especialment en el **temperament igual**, el sistema d’afinació més utilitzat en la música occidental, per comprendre per què funciona tan bé tant des d’un punt de vista matemàtic com musical.
 
---- Afinador: Una eina per afinar instruments segons el sistema de temperament igual.
+També exploro conceptes com **harmonia**, **disonància** i **consonància**, i com tenen una base matemàtica que afecta la nostra percepció del so.
 
---- Calculadora de Notes: Introduïu una freqüència i et mostrarà la nota musical corresponent.
+---
 
---- Visualitzador d’Escales: Una manera interactiva d'explorar escales musicals i veure les relacions entre les notes.
+## Eines del Repositori
 
-Sempre m’ha agradat la manera com dues disciplines tan diferents com la música i les matemàtiques poden estar tan connectades. A través d’aquest projecte, he volgut aprofundir en aquesta relació i entendre-la millor, amb l’objectiu de compartir aquest coneixement de manera pràctica i accessible.
+Aquest repositori conté diverses eines interactives perquè puguis experimentar amb els conceptes investigats:
 
-Per provar les eines, només cal que obris els arxius HTML amb un navegador web. No cal instal·lar res.
+### 1. **Afinador Web**
+Una eina per afinar instruments segons el **temperament igual**.
 
+### 2. **Calculadora de Notes**
+Introdueix una freqüència i et mostrarà la nota musical corresponent.
+
+### 3. **Visualitzador d’Escales**
+Explora diferents escales musicals i com es relacionen les notes a través de les seves freqüències.
+
+---
+
+## Per què vaig triar aquest tema?
+
+La música i les matemàtiques, tot i semblar disciplines separades, estan profundament connectades. Sempre m’ha fascinat com una base matemàtica pot influir tant en la creació i percepció musical. A través d’aquest projecte, he volgut aprofundir en aquesta relació i compartir els meus descobriments de manera accessible.
+
+---
+
+## Com provar les eines?
+
+1. Clona o descarrega aquest repositori.
+2. Obre els arxius HTML en el teu navegador.
+3. Comença a experimentar amb l'afiner, la calculadora i el visualitzador d’escales!
+
+No cal instal·lar res.
+
+---
+
+## Tecnologies utilitzades
+
+- **HTML/CSS** per a la creació de les interfícies web.
+- **JavaScript** per a les funcionalitats interactives.
+
+## Imatges
+
+![image](https://github.com/user-attachments/assets/b2e67b71-26b1-427e-8563-4b5dd119cad1)
+![Screenshot 2025-05-08 08 30 13](https://github.com/user-attachments/assets/0b33f16f-9e97-4164-9c0b-9378a33fe3de)
+![Screenshot 2025-05-08 08 30 18](https://github.com/user-attachments/assets/230a0e37-10a2-4b48-b475-e162b8245392)
+
+Possibles canvis
