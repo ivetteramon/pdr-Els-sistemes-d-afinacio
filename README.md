@@ -1,3 +1,5 @@
+#PDR Ivette Ramon. Música i Matemàtiques: Els sistemes d'afinació
+
 Aquest projecte neix de la meva curiositat per entendre com la música, tot i ser una forma d'art tan expressiva, té una connexió tan profunda amb les matemàtiques. Des de fa milers d’anys, sabem que hi ha una relació entre el so i els números, però és en la música on aquesta connexió es fa més evident.
 
 Objectiu del treball
