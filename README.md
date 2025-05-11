@@ -23,7 +23,7 @@ Una eina per afinar instruments segons el **temperament igual**.
 Introdueix una freqüència i et mostrarà la nota musical corresponent.
 
 ### 3. **Visualitzador d’Escales**
-Explora diferents escales musicals i com es relacionen les notes a través de les seves freqüències.
+Explora diferents escales musicals i com es relacionen les notes a través de les seves freqüències (amb els dos sistemes d'afinació).
 
 ---
 
