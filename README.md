@@ -37,7 +37,7 @@ La música i les matemàtiques, tot i semblar disciplines separades, estan profu
 
 1. Clona o descarrega aquest repositori.
 2. Obre els arxius HTML en el teu navegador.
-3. Comença a experimentar amb l'afiner, la calculadora i el visualitzador d’escales!
+3. Comença a experimentar amb l'afinador, la calculadora i el visualitzador d’escales.
 
 No cal instal·lar res.
 
