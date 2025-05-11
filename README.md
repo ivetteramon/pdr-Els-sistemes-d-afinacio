@@ -1,7 +1,8 @@
 #  PDR - Música i Matemàtiques🎵📏
 Ivette Ramon 4t ESO
 
-
+.
+.
 
 Aquest projecte neix de la meva curiositat per entendre com la música i les matemàtiques estan profundament connectades. Des de fa milers d’anys, sabem que la música té una base matemàtica sòlida, i aquest treball busca explorar aquesta relació de manera accessible i pràctica.
 
