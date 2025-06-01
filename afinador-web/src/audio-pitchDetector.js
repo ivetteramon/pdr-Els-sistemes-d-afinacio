@@ -3,7 +3,8 @@ export function autoCorrelate(buffer, sampleRate) {
   let rms = 0;
 
   for (let i = 0; i < SIZE; i++) {
-    rms += buffer[i] * buffer[i];
+    let val = buffer[i];
+    rms += val * val;
   }
   rms = Math.sqrt(rms / SIZE);
   if (rms < 0.01) return -1;
@@ -28,7 +29,7 @@ export function autoCorrelate(buffer, sampleRate) {
   const c = new Array(SIZE).fill(0);
   for (let i = 0; i < SIZE; i++) {
     for (let j = 0; j < SIZE - i; j++) {
-      c[i] += buffer[j] * buffer[j + i];
+      c[i] = c[i] + buffer[j] * buffer[j + i];
     }
   }
 
