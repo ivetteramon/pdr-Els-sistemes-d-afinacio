@@ -14,7 +14,7 @@ També exploro conceptes com **harmonia**, **disonància** i **consonància**, i
 
 ## Eines del Repositori
 
-Aquest repositori conté diverses eines interactives perquè puguis experimentar amb els conceptes investigats:
+Aquest repositori conté dues eines interactives perquè puguis experimentar amb els conceptes treballats:
 
 ### 1. **Afinador Web**
 Una eina per afinar instruments **(temperament igual)**.
@@ -22,16 +22,13 @@ Una eina per afinar instruments **(temperament igual)**.
 ### 2. **Calculadora de Notes**
 Introdueix una freqüència i et mostra la nota musical corresponent.
 
-### 3. **Visualitzador d’Escales**
-Explora escales musicals (en temperament just i igual) i com es relacionen les notes a través de les seves freqüències (amb els dos sistemes d'afinació).
-
 ---
 
 ## Com provar les eines?
 
 1. Clona o descarrega aquest repositori (.zip).
-2. Obre l'arxiu anomenat "index.html" en les descàrregues.
-3. Comença a experimentar amb l'afinador, la calculadora i el visualitzador d’escales.
+2. Obre l'arxiu anomenat "index.html" (en el cas de l'afinador) i "calc_igual.html" (en el cas de la calculadora) en les descàrregues.
+3. Comença a experimentar amb l'afinador, i la calculadora.
 
 No cal instal·lar res.
 
@@ -44,7 +41,5 @@ No cal instal·lar res.
 
 ## Imatges
 
-![image](https://github.com/user-attachments/assets/b2e67b71-26b1-427e-8563-4b5dd119cad1)
-![Screenshot 2025-05-08 08 30 13](https://github.com/user-attachments/assets/0b33f16f-9e97-4164-9c0b-9378a33fe3de)
-![Screenshot 2025-05-08 08 30 18](https://github.com/user-attachments/assets/230a0e37-10a2-4b48-b475-e162b8245392)
-
+![image](https://github.com/user-attachments/assets/ce41a33d-1d66-4f8f-9834-1787b82c0f72)
+![image](https://github.com/user-attachments/assets/91750649-e040-4084-a2db-68cf30a285b6)
