@@ -34,11 +34,6 @@ No cal instal·lar res.
 
 ---
 
-## Tecnologies utilitzades
-
-- **HTML/CSS** per a la creació de la web.
-- **JavaScript** per a la part interactiva.
-
 ## Imatges
 
 ![image](https://github.com/user-attachments/assets/ce41a33d-1d66-4f8f-9834-1787b82c0f72)
