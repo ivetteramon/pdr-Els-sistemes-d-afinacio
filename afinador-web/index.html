@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Afinador</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../src/css/styles.css">
 </head>
 <body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-4">
   <h1 class="text-4xl font-bold mb-4">Afinador Web</h1>
+
   <div class="text-center space-y-4">
     <div class="text-2xl">Nota: <span id="note" class="font-mono">--</span></div>
     <div class="text-xl">Freqüència: <span id="freq">--</span> Hz</div>
 
     <!-- Indicador -->
     <div class="relative w-64 h-6 bg-gray-700 rounded-full overflow-hidden mx-auto">
-      <div class="absolute left-1/2 top-0 w-0.5 h-full bg-white"></div>
-      <div id="indicadorAfinador" class="absolute top-0 w-2 h-full bg-green-500 rounded-full transition-all duration-75"></div>
+      <div class="absolute left-1/2 top-0 w-0.5 h-full bg-white"></div> <!-- Línia central -->
+      <div id="tuningIndicator" class="absolute top-0 w-2 h-full bg-green-500 rounded-full transition-all duration-75"></div>
     </div>
 
     <div class="text-sm text-gray-400">⬅️---------| ✅ |---------➡️</div>
   </div>
 
-  <script type="module" src="../src/js/main.js"></script>
+  <script type="module" src="./src/main.js"></script>
 </body>
 </html>
