@@ -1,10 +1,10 @@
-import { autoCorrelate } from "./audio/pitchDetector.js";
-import { getNoteInfo } from "./utils/notes.js";
-import { updateUI } from "./ui/indicator.js";
+import { autoCorrelate } from "./audio-pitchDetector.js";
+import { getNoteInfo } from "./notes.js";
+import { updateIndicator } from "./indicator.js";
 
 const noteDisplay = document.getElementById("note");
 const freqDisplay = document.getElementById("freq");
-const indicadorAfinador = document.getElementById("indicadorAfinador");
+const tuningIndicator = document.getElementById("tuningIndicator");
 
 navigator.mediaDevices.getUserMedia({ audio: true })
   .then(stream => {
@@ -25,7 +25,10 @@ navigator.mediaDevices.getUserMedia({ audio: true })
         const noteInfo = getNoteInfo(frequency);
         noteDisplay.textContent = noteInfo.name;
 
-        updateUI(indicadorAfinador, frequency, noteInfo.freq);
+        // Calcula la diferencia en cent
+        const centsOff = 1200 * Math.log2(frequency / noteInfo.freq);
+
+        updateIndicator(tuningIndicator, centsOff);
       } else {
         noteDisplay.textContent = "--";
         freqDisplay.textContent = "--";
@@ -35,4 +38,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
     }
 
     detectPitch();
+  })
+  .catch(err => {
+    console.error("Error per accedir al micròfon:", err);
   });
